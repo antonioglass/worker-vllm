@@ -72,6 +72,7 @@ python3 download_model.py --model_name=name/model
 MODEL_NAME=name/model
 QUANTIZATION=awq
 STREAMING=false
+TOKENIZER=name/model
 4. Setup Endpoint and attach a Network Volume.
 
 # 🚀 GPU Type Guide
