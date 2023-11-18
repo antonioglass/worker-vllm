@@ -66,7 +66,7 @@ docker push antonioglass/worker-vllm:1.0.0
 ```
 2. Set up a Network Volume and download a model using `scripts/download_model.py` script (huggingface-hub needed):
 ```bash
-python3 script.py --model_name=name/model
+python3 download_model.py --model_name=name/model
 ```
 3. Create Template with the following Environment Variables:
 MODEL_NAME=name/model

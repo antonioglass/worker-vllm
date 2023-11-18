@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description="Download model from Hugging Face H
 parser.add_argument('--hugging_face_hub_token', type=str, help='Hugging Face Hub Token')
 parser.add_argument('--model_name', type=str, help='Model Name', required=True)
 parser.add_argument('--model_revision', type=str, default='main', help='Model Revision')
-parser.add_argument('--model_base_path', type=str, default='/runpod-volume/', help='Model Base Path')
+parser.add_argument('--model_base_path', type=str, default='/workspace/', help='Model Base Path')
 
 # Parse the arguments
 args = parser.parse_args()
@@ -30,5 +30,6 @@ snapshot_download(
     MODEL_NAME,
     revision=MODEL_REVISION,
     local_dir=f"{MODEL_BASE_PATH}{MODEL_NAME.split('/')[1]}",
+    local_dir_use_symlinks=False,
     **download_kwargs
 )
