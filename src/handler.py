@@ -95,6 +95,8 @@ def validate_sampling_params(sampling_params):
         sampling_params.get('presence_penalty'), 0.0)
     frequency_penalty = validate_float(
         sampling_params.get('frequency_penalty'), 0.0)
+    repetition_penalty = validate_float(
+        sampling_params.get('repetition_penalty'), 1.0)
     temperature = validate_float(sampling_params.get('temperature'), 1.0)
     top_p = validate_float(sampling_params.get('top_p'), 1.0)
     top_k = validate_int(sampling_params.get('top_k'), -1)
@@ -110,6 +112,7 @@ def validate_sampling_params(sampling_params):
         'best_of': best_of,
         'presence_penalty': presence_penalty,
         'frequency_penalty': frequency_penalty,
+        'repetition_penalty': repetition_penalty,
         'temperature': temperature,
         'top_p': top_p,
         'top_k': top_k,
