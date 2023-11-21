@@ -75,6 +75,14 @@ STREAMING=false
 TOKENIZER=name/model
 4. Setup Endpoint and attach a Network Volume.
 
+Optional (before downloading models):
+```bash
+python3 -m venv /workspace/venv
+source /workspace/venv/bin/activate
+pip install huggingface-hub==0.16.4
+deactivate
+```
+
 # 🚀 GPU Type Guide
 Here is a rough estimate on how much VRAM you need for your model. You can use this table to select the right GPU type for your model.
 | Model Parameters | Storage & VRAM |
