@@ -31,5 +31,6 @@ snapshot_download(
     revision=MODEL_REVISION,
     local_dir=f"{MODEL_BASE_PATH}{MODEL_NAME.split('/')[1]}",
     local_dir_use_symlinks=False,
+    cache_dir="/workspace/",
     **download_kwargs
 )
